@@ -1,5 +1,6 @@
 import React from 'react';
 import KlingonClock from './components/KlingonClock';
+import AnalogClock from './components/AnalogClock';
 import Footer from './components/Footer';
 import { getKlingonPhrase } from './utils/klingonTranslator';
 
@@ -22,9 +23,14 @@ function App() {
         {getKlingonPhrase('Welcome to')} {getKlingonPhrase('Klingon Clock')}
       </h1>
       
-      {/* Clock Component */}
-      <div className="mb-8">
+      {/* Klingon Digital Clock Component */}
+      <div className="mb-12">
         <KlingonClock />
+      </div>
+      
+      {/* Analog Clock Component */}
+      <div className="mb-12">
+        <AnalogClock />
       </div>
       
       {/* Footer */}

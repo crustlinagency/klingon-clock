@@ -7,6 +7,9 @@ export default {
         yellow: {
           300: '#FFD700', // Brighter yellow for better contrast on black
         },
+        red: {
+          500: '#EF4444', // Red for second hand
+        },
         black: {
           DEFAULT: '#000000',
         },
@@ -23,6 +26,7 @@ export default {
         '5': '40px',
         '6': '48px',
         '8': '64px',
+        '12': '96px',
       }
     },
   },
