@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { dateToKlingon } from '../utils/klingonTranslator';
 
 /**
  * AnalogClock Component
  * 
  * Displays an analog clock with Klingon-inspired styling that syncs with the digital clock.
  * Features hour, minute, and second hands with a Klingon symbol background.
+ * Also displays the current date in Klingon below the clock.
  */
 const AnalogClock: React.FC = () => {
   const [time, setTime] = useState(new Date());
@@ -125,6 +127,13 @@ const AnalogClock: React.FC = () => {
 
         {/* Center Dot */}
         <div className="absolute w-4 h-4 bg-yellow-300 rounded-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-black" />
+      </div>
+      
+      {/* Klingon Date Display */}
+      <div className="mt-6 text-center">
+        <p className="text-yellow-300 text-lg md:text-xl font-semibold animate-fade-in">
+          {dateToKlingon(time)}
+        </p>
       </div>
     </div>
   );
