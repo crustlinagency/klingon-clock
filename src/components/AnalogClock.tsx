@@ -126,26 +126,6 @@ const AnalogClock: React.FC = () => {
         {/* Center Dot */}
         <div className="absolute w-4 h-4 bg-yellow-300 rounded-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-black" />
       </div>
-
-      {/* Time Display in Letters */}
-      <div className="mt-6 text-center">
-        <div className="text-yellow-300 text-lg font-semibold">
-          {time.toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric',
-            hour12: true
-          })}
-        </div>
-        <div className="text-yellow-300 text-sm opacity-75 mt-1">
-          {time.toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </div>
-      </div>
     </div>
   );
 };
